@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon</title>
+  <style>/* Code By Webdevtrick ( https://webdevtrick.com ) */
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    #container {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 99;
+    }
+    .content h2{ 
+      font-size: 70px;
+      color: #fff;
+      font-weight: 700;      
+    }
+    @media (max-width: 1440px){
+      .content h2{ 
+      font-size: 60px;
+      color: #fff;
+      font-weight: 700;      
+      }
+    }
+    @media (max-width: 1024px){
+      .content h2{ 
+      font-size: 46px;
+      color: #fff;
+      font-weight: 700;      
+      }
+    }
+    @media (max-width: 767px){
+      .content h2{ 
+      font-size: 36px;
+      color: #fff;
+      font-weight: 700;      
+      }
+    }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div class="content">
+      <h2>Coming Soon</h2>
+    </div>      
+</body>
+ 
+<script src='https://rawgit.com/JulianLaval/canvas-particle-network/master/particle-network.min.js'></script>
+<script >
+  // Code By Webdevtrick ( https://webdevtrick.com )
+var canvasDiv = document.getElementById('container');
+var options = {
+  particleColor: '#fff',
+  background: 'https://webdevtrick.com/wp-content/uploads/coding.jpg',
+  interactive: true,
+  speed: 'high',
+  density: 'high'
+};
+var particleCanvas = new ParticleNetwork(canvasDiv, options);
+</script>
+</html>
